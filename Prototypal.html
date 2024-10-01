@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Example 1: Basic prototypal inheritance
+function Animal(name) {
+  this.name = name;
+}
+Animal.prototype.speak = function() {
+  console.log(`${this.name} makes a sound.`);
+};
+const dog = new Animal('Dog');
+dog.speak(); // Output: Dog makes a sound.
+
+    </script>
+
+    <script>
+        let company = {
+  name: "A",
+  pay: function () {
+    console.log("Paying");
+  },
+}; //company object
+let worker = {
+  id: 1,
+  work: function () {
+    console.log("Working");
+  },
+}; //worker object
+worker.__proto__ = company; //worker object inherits company object
+
+worker.pay(); // calling method from company object using worker object.
+
+    </script>
+</body>
+</html>

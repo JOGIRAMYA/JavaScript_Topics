@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Example 1: Using rest parameters to handle multiple inputs
+function sum(...numbers) {
+  return numbers.reduce((total, num) => total + num);
+}
+console.log(sum(1, 2, 3, 4)); // Output: 10
+
+    </script>
+
+    <script>
+        // Example 2: Function to log any number of arguments
+function logMessages(...messages) {
+  messages.forEach(msg => console.log(msg));
+}
+logMessages("Hello", "World", "from", "Rest parameters"); 
+// Output: 
+// Hello
+// World
+// from
+// Rest parameters
+
+    </script>
+    
+</body>
+</html>
